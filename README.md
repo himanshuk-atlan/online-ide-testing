@@ -15,37 +15,15 @@ Follow the steps below to set up your application environment.
 
 Navigate to the root of your cloned Automation Engine directory and read the README: atlan-automation-engine-app/README.md
 
-This includes required environment variables, runtime configuration, and other setup details.
+This includes required environment variables and other setup details.
 
-### 3. Create a new application directory
-
+### 3. Run the automation engine
 ```bash
-  mkdir my-application
-  cd my-application
-```
-
-### 4. Install the Atlan Application SDK
-
-Install using one of the package managers below:
-
-#### Option A — pip
-
-```bash
-  pip install atlan-application-sdk
-```
-
-#### Option B — uv
-
-```bash
-  uv add atlan-application-sdk
-```
-
-#### Option C — Poetry
-
-```bash
-  poetry add atlan-application-sdk
+    cd atlan-automation-engine-app
+    uv run poe start-deps
+    cd automation_engine
+    uv run main.py
 ```
 
 ## You’re ready!
-
-Your environment is now set up. Begin building your application with the Atlan Application SDK inside your online IDE.
+Your environment is now set up. Begin building your application with the Atlan Application SDK inside your online IDE. Test your activities inside the automation engine ui(http://localhost:3000) and publish them by raising PR
